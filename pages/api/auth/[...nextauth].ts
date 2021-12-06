@@ -8,4 +8,9 @@ export default NextAuth({
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
+  callbacks: {
+    session({ session }) {
+      return session;
+    },
+  },
 });
