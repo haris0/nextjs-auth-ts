@@ -24,11 +24,13 @@ const Navbar = () => {
             <a>Home</a>
           </Link>
         </li>
-        <li>
-          <Link href="/dashboard">
-            <a>Dashboard</a>
-          </Link>
-        </li>
+        {session && (
+          <li>
+            <Link href="/dashboard">
+              <a>Dashboard</a>
+            </Link>
+          </li>
+        )}
         <li>
           <Link href="/blog">
             <a>Blog</a>
